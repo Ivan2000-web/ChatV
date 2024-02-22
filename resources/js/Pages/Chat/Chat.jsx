@@ -6,6 +6,7 @@ import ChatMessages from '@/Components/Chat/ChatMessages';
 import ChatInput from '@/Components/Chat/ChatInput';
 
 export default function Chat(props) {
+    console.log(props);
     return (
         <AuthenticatedLayout
             auth={props.auth}

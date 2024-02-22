@@ -34,6 +34,6 @@ class MessageSent implements ShouldBroadcastNow
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('messanger');
+        return new PrivateChannel('messanger.1.2');
     }
 }
