@@ -16,7 +16,7 @@ export default function Chat(props) {
             <div className="messanger h-screen overflow-hidden bg-sky-500 p-4">
                 <div className="flex">
                     <div className="basis-2/6 border-r border-slate-100 bg-white pt-3">
-                        <ChatSidebar />
+                        <ChatSidebar recentMessages={props.recentMessages}/>
                     </div>
 
                     <div className="basis-4/6">
