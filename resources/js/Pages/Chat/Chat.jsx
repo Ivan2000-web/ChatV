@@ -20,13 +20,18 @@ export default function Chat(props) {
                     </div>
 
                     <div className="basis-4/6">
-                        <ChatUserInfoHeader />
+                        <div className="flex justify-center items-center bg-slate-100 h-screen">
+                            <p className='font-bold text-3xl text-gray-500'>
+                                 Please select a User to start chatting...
+                            </p>
+                        </div>
+                        {/* <ChatUserInfoHeader />
                         <div className="messanger mt-4">
                             <div className="px-4">
                                 <ChatMessages />
                             </div>
                             <ChatInput />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
