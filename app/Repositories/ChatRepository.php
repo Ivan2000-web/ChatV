@@ -14,7 +14,7 @@ class ChatRepository {
         ->get();
     }
 
-    public function sendMessages(array $data ): Message {
+    public function sendMessage(array $data): Message {
         return Message::create($data);
     }
 
