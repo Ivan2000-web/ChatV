@@ -7,26 +7,21 @@ import ChatInput from '@/Components/Chat/ChatInput';
 
 export default function Chat(props) {
     return (
-        <AuthenticatedLayout
-            auth={props.auth}
-            errors={props.errors}
-            header={<></>}
-        >
-            <div className="messanger h-screen overflow-hidden bg-sky-500 p-4">
+            <div className="messanger bg-slate-300">
                 <div className="flex">
-                    <div className="basis-2/6 border-r border-slate-100 bg-white pt-3">
-                        <ChatSidebar recentMessages={props.recentMessages} />
+                    <div className="w-2/6 border-r border-slate-100 bg-white pt-3">
+                        <ChatSidebar recentMessages={props.recentMessages} />   
                     </div>
 
-                    <div className="basis-4/6">
+                    <div className="w-4/6">
                         {
                             props.receiver?.id ? (
                                 <>
+                                    <div class="w-full">
                                     <ChatUserInfoHeader receiver={props.receiver}/>
-                                    <div className="messanger mt-4">
-                                        <div className="px-4">
+                                    </div>
+                                    <div className="messanger mt-10 pr-1 pl-1">
                                             <ChatMessages messages={props.messages} auth_id={props.auth?.user?.id}/>
-                                        </div>
                                         <ChatInput receiver={props.receiver}/>
                                     </div>
                                 </>
@@ -38,9 +33,9 @@ export default function Chat(props) {
                                 </div>
                             )}
                     </div>
+
                 </div>
             </div>
-
-        </AuthenticatedLayout>
     );
 }
+

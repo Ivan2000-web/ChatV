@@ -1,4 +1,5 @@
 import { Link } from '@inertiajs/react';
+import styles from '/resources/js/Components/Chat/App.module.scss'
 
 
 export default function ChatSidebar({ recentMessages }) {
@@ -8,7 +9,7 @@ export default function ChatSidebar({ recentMessages }) {
                 <div className="flex justify-between border-b border-slate-100 px-5 pb-1">
                     <form className='flex justify-center items-center'>
                         <i className="fa fa-search"></i>
-                        <input type="search" className="font-light border-0 hover:border-0 focus:border-0 focus:ring-0 !shadow-none focus:!outline-none" placeholder="Search" />
+                        <input type="search" className={styles.input_search} placeholder="Search" />
                     </form>
                     <div>
                         <button className="relative">
@@ -19,7 +20,7 @@ export default function ChatSidebar({ recentMessages }) {
                 </div>
             </div>
 
-            <div className="user-list h-screen overflow-y-auto">
+            <div className="user-list overflow-y-auto bg-slate-100">
                 {recentMessages.map((user, index) => (
                     <Link
                         href={`/chat/${user.user_id}`}
@@ -35,7 +36,7 @@ export default function ChatSidebar({ recentMessages }) {
                         </div>
 
                         <div>
-                            <h3 className="text-md text-violet-500">{user.name}</h3>
+                            <h3 className="text-md text-black">{user.name}</h3>
                             <p className="h-5 overflow-hidden text-sm font-light text-gray-400">{user.message}</p>
                         </div>
                     </Link>

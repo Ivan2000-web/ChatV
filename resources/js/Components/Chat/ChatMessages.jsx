@@ -6,7 +6,7 @@ export default function ChatMessages({ messages, auth_id }) {
     };
 
     return (
-        <>
+        <div class="">
             {(messages || []).map((message, index) => (
                 <Fragment key={index}>
                     <div
@@ -19,12 +19,10 @@ export default function ChatMessages({ messages, auth_id }) {
                         <div
                             className={`mb-2 max-w-[80%] rounded ${
                                 isReceivedMessage(message)
-                                    ? "bg-violet-400"
-                                    : "bg-violet-200"
-                            } px-5 py-2 text-sm ${
+                                    ? "bg-gray-400"
+                                    : "bg-gray-200"
+                            } px-5 py-2 text-stone-800 ${
                                 isReceivedMessage(message)
-                                    ? "text-white"
-                                    : "text-slate-500"
                             }`}
                         >
                             <p>{message?.message}</p>
@@ -32,6 +30,6 @@ export default function ChatMessages({ messages, auth_id }) {
                     </div>
                 </Fragment>
             ))}
-        </>
+        </div>
     );
 }

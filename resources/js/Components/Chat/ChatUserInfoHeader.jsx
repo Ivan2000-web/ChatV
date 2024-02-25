@@ -1,6 +1,6 @@
 export default function ChatUserInfoHeader({ receiver }) {
     return (
-        <div className="user-info-header bg-white px-5 py-3">
+        <div className="user-info-header bg-gray-50 px-5 py-3">
             <div className="flex justify-between">
                 <div className="flex items-center">
                     {receiver?.avatar !== undefined ? (
@@ -12,14 +12,14 @@ export default function ChatUserInfoHeader({ receiver }) {
                         <i className="fa fa-user-circle text-gray-300 text-5xl"></i>
                     )}
 
-                    <h3 className="text-md pl-4 text-gray-400">
+                    <h3 className="text-md pl-4 text-black">
                         {receiver?.name}
                     </h3>
                 </div>
                 <div>
-                    <i className="fa fa-message text-violet-300"></i>
-                    <i className="fa fa-video ml-3 text-gray-200"></i>
-                    <i className="fa fa-phone ml-3 text-gray-200"></i>
+                    <i className="fa fa-message text-gray-400"></i>
+                    <i className="fa fa-video ml-3 text-gray-300"></i>
+                    <i className="fa fa-phone ml-3 text-gray-300"></i>
                 </div>
             </div>
         </div>
