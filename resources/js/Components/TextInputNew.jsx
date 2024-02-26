@@ -1,6 +1,7 @@
 import { forwardRef, useEffect, useRef } from 'react';
+import styles from '/resources/js/Components/Chat/App.module.scss'
 
-export default forwardRef(function TextInput({ type = 'text', className = '', isFocused = false, ...props }, ref) {
+export default forwardRef(function TextInput({ type = 'text', isFocused = false, ...props }, ref) {
     const input = ref ? ref : useRef();
 
     useEffect(() => {
@@ -14,7 +15,7 @@ export default forwardRef(function TextInput({ type = 'text', className = '', is
                 {...props}
                 type={type}
                 className={
-                    'w-11/12' 
+                    'w-11/12' + ' ' + styles.input_send
                 }
                 ref={input}
             />

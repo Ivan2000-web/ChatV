@@ -21,7 +21,6 @@ export default function ChatInput({ receiver }) {
         <div className="bg-white mt-5">
             <form onSubmit={submit} className={styles.form_send}>
                 <TextInputNew
-                    className={styles.input_send}
                     placeHolder="Write a message"
                     name="message"
                     value={data.message}
