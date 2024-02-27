@@ -6,7 +6,7 @@ export default function ChatMessages({ messages, auth_id }) {
     };
 
     return (
-        <div class="">
+        <div class="flex flex-col">
             {(messages || []).map((message, index) => (
                 <Fragment key={index}>
                     <div
@@ -14,16 +14,17 @@ export default function ChatMessages({ messages, auth_id }) {
                             isReceivedMessage(message)
                                 ? "receive-chat justify-start"
                                 : "send-chat justify-end"
-                        } relative flex`}
+                        } flex`}
                     >
                         <div
-                            className={`mb-2 max-w-[80%] rounded ${
+                            className={`overflow-hidden mb-2 max-w-[80%] rounded ${
                                 isReceivedMessage(message)
                                     ? "bg-gray-400"
                                     : "bg-gray-200"
                             } px-5 py-2 text-stone-800 ${
                                 isReceivedMessage(message)
                             }`}
+                            style={{ wordWrap: "break-word" }} 
                         >
                             <p>{message?.message}</p>
                         </div>
