@@ -20,7 +20,7 @@ export default function Chat(props) {
                                     <div class="w-full">
                                     <ChatUserInfoHeader receiver={props.receiver}/>
                                     </div>
-                                    <div className="messanger mt-10 pr-1 pl-1">
+                                    <div className="messanger mt-28 pr-1 pl-1">
                                             <ChatMessages messages={props.messages} auth_id={props.auth?.user?.id}/>
                                         <ChatInput receiver={props.receiver}/>
                                     </div>

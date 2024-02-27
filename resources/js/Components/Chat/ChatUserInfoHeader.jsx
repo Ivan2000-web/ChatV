@@ -1,6 +1,6 @@
 export default function ChatUserInfoHeader({ receiver }) {
     return (
-        <div className="user-info-header bg-gray-50 px-5 py-3">
+        <div className="fixed top-0 w-full user-info-header bg-gray-50 px-5 py-3">
             <div className="flex justify-between">
                 <div className="flex items-center">
                     {receiver?.avatar !== undefined ? (
